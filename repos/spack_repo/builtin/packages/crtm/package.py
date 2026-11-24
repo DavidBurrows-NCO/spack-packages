@@ -77,7 +77,7 @@ class Crtm(CMakePackage):
     depends_on("fortran", type="build")
 
     depends_on("cmake@3.15:", type="build")
-    depends_on("cmake@3.20:", when="@3.1.3:", type="build")
+    depends_on("cmake@3.20:", when="@3.1.6:", type="build")
     depends_on("git-lfs", when="@:3.1.2")
     depends_on("netcdf-fortran", when="@2.4.0:")
     depends_on("netcdf-fortran", when="@v2.3")
@@ -89,8 +89,8 @@ class Crtm(CMakePackage):
     depends_on("crtm-fix@2.4.0.1_emc", when="@2.4.0.1 +fix")
     depends_on("crtm-fix@3.1.1", when="@3.1.1 +fix")
     depends_on("crtm-fix@3.1.2", when="@3.1.2 +fix")
-    # Note. crtm@3.1.3 uses crtm-fix@3.1.2
-    depends_on("crtm-fix@3.1.2", when="@3.1.3 +fix")
+    # Note. crtm@3.1.6 uses crtm-fix@3.1.2
+    depends_on("crtm-fix@3.1.2 +little_endian", when="@3.1.6 +fix")
 
     depends_on("ecbuild", type=("build"), when="@v2.3")
     depends_on("ecbuild", type=("build"), when="@v2.4")
