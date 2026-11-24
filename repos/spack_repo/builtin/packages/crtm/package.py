@@ -90,7 +90,7 @@ class Crtm(CMakePackage):
     depends_on("crtm-fix@3.1.1", when="@3.1.1 +fix")
     depends_on("crtm-fix@3.1.2", when="@3.1.2 +fix")
     # Note. crtm@3.1.6 uses crtm-fix@3.1.2
-    depends_on("crtm-fix@3.1.2 +little_endian", when="@3.1.6 +fix")
+    depends_on("crtm-fix@3.1.2 +little_endian+testfiles", when="@3.1.6 +fix")
 
     depends_on("ecbuild", type=("build"), when="@v2.3")
     depends_on("ecbuild", type=("build"), when="@v2.4")
